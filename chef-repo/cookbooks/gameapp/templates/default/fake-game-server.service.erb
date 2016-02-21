@@ -1,0 +1,6 @@
+Description=Mailcatcher webmail
+
+[Service]
+ExecStart=<%= node['gameapp']['app_root'] %> --foreground --http-ip "<%= node['gameapp']['app_ip'] %>" --http-port <%= node['gameapp']['app_port'] %> --http-host-name <%= node['hostname'] %> --http-host-ip <%= node['ipaddress'] %> --http-auth <%= node['gameapp']['authentication'] %> --http-ssl <%= node['gameapp']['ssl'] %>
+Type=simple
+
